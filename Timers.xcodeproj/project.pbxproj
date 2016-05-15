@@ -14,6 +14,8 @@
 		117169951CE34383007D6F68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117169931CE34383007D6F68 /* LaunchScreen.storyboard */; };
 		1171699D1CE343B3007D6F68 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1171699C1CE343B3007D6F68 /* TableViewController.swift */; };
 		1171699F1CE3452D007D6F68 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1171699E1CE3452D007D6F68 /* Timer.swift */; };
+		75B7C2E61CE87C610025B02C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7C2E51CE87C610025B02C /* TableViewCell.swift */; };
+		75B7C2E81CE8A7BC0025B02C /* Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 75B7C2E71CE8A7BC0025B02C /* Music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		117169961CE34383007D6F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1171699C1CE343B3007D6F68 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		1171699E1CE3452D007D6F68 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		75B7C2E51CE87C610025B02C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		75B7C2E71CE8A7BC0025B02C /* Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Music.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +65,13 @@
 				1171698A1CE34383007D6F68 /* AppDelegate.swift */,
 				1171698E1CE34383007D6F68 /* Main.storyboard */,
 				1171699E1CE3452D007D6F68 /* Timer.swift */,
+				75B7C2E71CE8A7BC0025B02C /* Music.mp3 */,
 				1171699C1CE343B3007D6F68 /* TableViewController.swift */,
 				1171698C1CE34383007D6F68 /* ViewController.swift */,
 				117169911CE34383007D6F68 /* Assets.xcassets */,
 				117169931CE34383007D6F68 /* LaunchScreen.storyboard */,
 				117169961CE34383007D6F68 /* Info.plist */,
+				75B7C2E51CE87C610025B02C /* TableViewCell.swift */,
 			);
 			path = Timers;
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75B7C2E81CE8A7BC0025B02C /* Music.mp3 in Resources */,
 				117169951CE34383007D6F68 /* LaunchScreen.storyboard in Resources */,
 				117169921CE34383007D6F68 /* Assets.xcassets in Resources */,
 				117169901CE34383007D6F68 /* Main.storyboard in Resources */,
@@ -141,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75B7C2E61CE87C610025B02C /* TableViewCell.swift in Sources */,
 				1171698D1CE34383007D6F68 /* ViewController.swift in Sources */,
 				1171699D1CE343B3007D6F68 /* TableViewController.swift in Sources */,
 				1171698B1CE34383007D6F68 /* AppDelegate.swift in Sources */,
@@ -294,6 +302,7 @@
 				1171699B1CE34383007D6F68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,19 +10,43 @@
         <scene sceneID="xvz-HT-QVw">
             <objects>
                 <tableViewController id="ZS2-WL-Qhb" customClass="TableViewController" customModule="Timers" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wfJ-yH-INk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="38" sectionHeaderHeight="28" sectionFooterHeight="28" id="wfJ-yH-INk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="m1C-ja-mMI">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="40" id="m1C-ja-mMI" customClass="TableViewCell" customModule="Timers" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m1C-ja-mMI" id="sR3-jv-UQb">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="39"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" multipleTouchEnabled="YES" alpha="0.59999999999999998" tag="1" contentMode="scaleToFill" restorationIdentifier="Cell" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-eu-jCF">
+                                            <rect key="frame" x="526" y="8" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="Fcf-0f-jtg"/>
+                                            </constraints>
+                                            <state key="normal" image="pen"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1up-dW-NuD">
+                                            <rect key="frame" x="8" y="10" width="44" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ebo-eu-jCF" firstAttribute="top" secondItem="sR3-jv-UQb" secondAttribute="topMargin" id="Fp5-zB-HXj"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Ebo-eu-jCF" secondAttribute="bottom" constant="-2" id="S7w-bs-6ql"/>
+                                        <constraint firstItem="1up-dW-NuD" firstAttribute="centerY" secondItem="Ebo-eu-jCF" secondAttribute="centerY" id="ZbR-WS-aSn"/>
+                                        <constraint firstItem="1up-dW-NuD" firstAttribute="leading" secondItem="sR3-jv-UQb" secondAttribute="leadingMargin" id="eAn-KU-Ns2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ebo-eu-jCF" secondAttribute="trailing" constant="41" id="nm9-CN-zKp"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="label" destination="1up-dW-NuD" id="SSk-dS-8KF"/>
+                                    <outlet property="renameButton" destination="Ebo-eu-jCF" id="2rz-MU-vbn"/>
                                     <segue destination="TM8-ii-mk9" kind="show" identifier="Detail" id="uYB-G3-Uvc"/>
                                 </connections>
                             </tableViewCell>
@@ -36,7 +60,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7B-26-5IN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="508"/>
+            <point key="canvasLocation" x="1179" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vAU-zV-b62">
@@ -73,7 +97,13 @@
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqU-CC-UA7">
                                 <rect key="frame" x="283" y="472" width="34" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Start"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRaduis">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startAction:" destination="TM8-ii-mk9" eventType="touchUpInside" id="X2j-SF-6Gx"/>
                                 </connections>
@@ -84,21 +114,27 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfg-zy-8MB">
-                                <rect key="frame" x="277" y="510" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="HDW-ce-YeM"/>
-                                </constraints>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stopAction:" destination="TM8-ii-mk9" eventType="touchUpInside" id="mBs-Ki-MNm"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KwK-jz-hwW">
                                 <rect key="frame" x="100" y="103" width="400" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfg-zy-8MB">
+                                <rect key="frame" x="277" y="510" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.61528903245925903" green="0.88326644897460938" blue="0.92331522703170776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="HDW-ce-YeM"/>
+                                </constraints>
+                                <state key="normal" title="Stop"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="stopAction:" destination="TM8-ii-mk9" eventType="touchUpInside" id="mBs-Ki-MNm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -136,7 +172,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCz-DF-meL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="462"/>
+            <point key="canvasLocation" x="1802" y="508"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pen" width="264" height="262"/>
+    </resources>
 </document>

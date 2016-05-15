@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var nameOfTimer: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
+    
     @IBOutlet weak var timeLabel: UILabel!
     
     private var label1: UILabel!
@@ -21,9 +23,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     private var minutes = 0
     
     var timer: Timer!
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         pickerView.delegate = self
         pickerView.dataSource = self
         
